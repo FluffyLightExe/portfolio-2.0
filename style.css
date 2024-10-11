@@ -7,51 +7,67 @@ body
     margin: 0px;
 }
 
-header
-{
-    position: sticky;
-    top: 0%;
-    width: 100%;
-}
+    header
+    {
+        position: sticky;
+        top: 0%;
+        width: 100%;
+    }
 
-nav
-{
-    display: flex;
-    justify-content: center;
-    background-color: #061F17;
-    padding: 5px;
-}
+        nav
+        {
+            display: flex;
+            justify-content: center;
+            background-color: #061F17;
+            padding: 5px;
+        }
 
-.nav
-{
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px;
-    border-radius: 8px;
-}
+            .nav
+            {
+                margin-left: 20px;
+                margin-right: 20px;
+                padding: 10px;
+                border-radius: 8px;
+            }
 
-.nav:hover
-{
-    cursor: pointer;
-    background-color: #041510;
-}
+            .nav:hover
+            {
+                cursor: pointer;
+                background-color: #041510;
+            }
 
-main
-{
-    padding: 10px;
-    max-width: 70%;
-    margin: auto;
-}
+    main
+    {
+        padding: 10px;
+        max-width: 70%;
+        margin: auto;
+    }
 
-#author
-{
-    float: right;
-    width: 30%;
-    padding: 20px;
-}
+        #author
+        {
+            float: right;
+            width: 30%;
+            padding: 20px;
+        }
 
-#about_me
-{
-    padding: 20px;
-    line-height: 150%;
-}
+        #about_me
+        {
+            padding: 20px;
+            line-height: 150%;
+        }
+
+    footer
+    {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 2%;
+        background-color: #041510;
+        font-size: 70%;
+        position: sticky;
+        bottom: 0%;
+    }
+
+        #mail
+        {
+            color: #ffffff;
+        }
