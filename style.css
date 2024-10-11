@@ -1,0 +1,57 @@
+body
+{
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 125%;
+    margin: 0px;
+}
+
+header
+{
+    position: sticky;
+    top: 0%;
+    width: 100%;
+}
+
+nav
+{
+    display: flex;
+    justify-content: center;
+    background-color: #061F17;
+    padding: 5px;
+}
+
+.nav
+{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.nav:hover
+{
+    cursor: pointer;
+    background-color: #041510;
+}
+
+main
+{
+    padding: 10px;
+    max-width: 70%;
+    margin: auto;
+}
+
+#author
+{
+    float: right;
+    width: 30%;
+    padding: 20px;
+}
+
+#about_me
+{
+    padding: 20px;
+    line-height: 150%;
+}
