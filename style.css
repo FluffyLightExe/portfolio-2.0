@@ -40,21 +40,49 @@ body
     {
         padding: 10px;
         max-width: 70%;
+        width: fit-content;
         margin: auto;
     }
 
-        #author
+        #content
         {
-            float: right;
-            width: 30%;
-            padding: 20px;
+            display: flex;
         }
 
-        #about_me
-        {
-            padding: 20px;
-            line-height: 150%;
-        }
+            #about_me
+            {
+                padding-left: 20px;
+            }
+
+                .about_me
+                {
+                    line-height: 150%;
+                }
+
+                    #PANS_Link
+                    {
+                        font-style: italic;
+                        text-decoration: none;
+                        color: white;
+
+                    }
+
+                    #PANS_Link:hover
+                    {
+                        cursor: pointer;
+                        color: #aaaaaa;
+                    }
+
+            #photo
+            {
+                width: 30%;
+                padding: 20px;
+            }
+
+                #author
+                {
+                    width: 100%;
+                }
 
     footer
     {
@@ -63,11 +91,19 @@ body
         padding: 2%;
         background-color: #041510;
         font-size: 70%;
-        position: sticky;
+        position: fixed;
+        width: 100%;
         bottom: 0%;
     }
 
         #mail
         {
             color: #ffffff;
+            text-decoration: none;
+        }
+
+        #mail:hover
+        {
+            cursor: pointer;
+            color: #aaaaaa;
         }

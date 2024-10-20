@@ -1,0 +1,129 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 125%;
+    margin: 0px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #061F17;
+    padding: 5px;
+}
+
+.nav {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.nav:hover {
+    cursor: pointer;
+    background-color: #041510;
+}
+
+main {
+    padding: 10px;
+    max-width: 70%;
+    width: fit-content;
+    margin: auto;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#about_me {
+    padding-left: 20px;
+    flex: 1 1 60%;
+}
+
+.about_me {
+    line-height: 150%;
+}
+
+#PANS_Link {
+    font-style: italic;
+    text-decoration: none;
+    color: white;
+}
+
+#PANS_Link:hover {
+    cursor: pointer;
+    color: #aaaaaa;
+}
+
+#photo {
+    width: 30%;
+    padding: 20px;
+    flex: 1 1 30%;
+}
+
+#author {
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2%;
+    background-color: #041510;
+    font-size: 70%;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#mail {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#mail:hover {
+    cursor: pointer;
+    color: #aaaaaa;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        font-size: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .nav {
+        margin: 5px 0;
+    }
+
+    main {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #content {
+        flex-direction: column;
+    }
+
+    #about_me, #photo {
+        flex: 1 1 100%;
+        padding: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        font-size: 80%;
+    }
+}
