@@ -174,30 +174,60 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    function displayRecommendations() {
+        const recommendationsDiv = document.getElementById('recommendations');
+        recommendationsDiv.innerHTML = '';
+
+        const allItems = Object.values(items).flatMap(category => 
+            Object.values(category).flat()
+        );
+
+        const shuffledItems = allItems.sort(() => 0.5 - Math.random());
+        const selectedItems = shuffledItems.slice(0, 3);
+
+        selectedItems.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'item';
+
+            const itemTitle = document.createElement('h3');
+            itemTitle.textContent = item.name;
+
+            const itemPrice = document.createElement('p');
+            itemPrice.textContent = `Cena: ${item.price}`;
+
+            const itemFeatures = document.createElement('ul');
+            item.features.forEach(feature => {
+                const featureLi = document.createElement('li');
+                featureLi.textContent = feature;
+                itemFeatures.appendChild(featureLi);
+            });
+
+            itemDiv.appendChild(itemTitle);
+            itemDiv.appendChild(itemPrice);
+            itemDiv.appendChild(itemFeatures);
+            
+            recommendationsDiv.appendChild(itemDiv);
+        });
+    }
+
     const subnavElements = document.querySelectorAll('.subnav');
     const mainSection = document.querySelector('main');
-
     subnavElements.forEach(subnav => {
         subnav.addEventListener('click', () => {
             const category = subnav.closest('.nav_dropdown').querySelector('.category').textContent;
             const subcategory = subnav.textContent;
             const selectedItems = items[category][subcategory];
-
-            mainSection.innerHTML = ''; // Wyczyść sekcję main
-
+            mainSection.innerHTML = '';
             if (selectedItems) {
                 selectedItems.forEach(item => {
                     const itemDiv = document.createElement('div');
                     itemDiv.classList.add('item');
-
                     const itemName = document.createElement('h3');
                     itemName.textContent = item.name;
                     itemDiv.appendChild(itemName);
-
                     const itemPrice = document.createElement('p');
                     itemPrice.textContent = `Cena: ${item.price}`;
                     itemDiv.appendChild(itemPrice);
-
                     const itemFeatures = document.createElement('ul');
                     item.features.forEach(feature => {
                         const featureLi = document.createElement('li');
@@ -205,7 +235,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         itemFeatures.appendChild(featureLi);
                     });
                     itemDiv.appendChild(itemFeatures);
-
                     mainSection.appendChild(itemDiv);
                 });
             } else {
@@ -213,10 +242,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
 
-const items = {
-    'Akcesoria': {
-        
-    }
-};
+    displayRecommendations();
+});
